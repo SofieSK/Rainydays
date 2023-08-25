@@ -1,0 +1,293 @@
+/* Add font*/
+
+body {
+    font-family: "Roboto";
+}
+
+/* body, header and footer all pages */
+
+body {
+    min-height: 100vh;
+    margin: 0px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+header,
+footer {
+    background-color: #0A3641;
+    color: white;
+    width: 100%;
+}
+
+header a {
+    color: white;
+}
+
+footer {
+    position: fixed;
+    text-align: center;
+    padding-top: 10px;
+    height: 30px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+
+
+}
+
+header {
+    height: 12rem;
+}
+
+.logo {
+    text-align: center;
+}
+
+.picture {
+    align-items: center;
+    height: 100px;
+    width: 220px;
+    padding: 10px;
+    border: black;
+    background-color: white;
+    margin-top: 10px;
+}
+
+
+
+
+
+/* Home Page*/
+
+.text {
+    text-align: center;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.text h1 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 1px;
+}
+
+.text p {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.images {
+    height: 230px;
+    width: 250px;
+    display: inline;
+    padding: 39px;
+}
+
+/* Product page */
+
+.products h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.products--jackets img {
+    height: 300px;
+    width: 300px;
+    border: solid #D9D9D9;
+}
+
+.products p {
+    font-size: 1.3rem;
+}
+
+.cta {
+    background-color: #0A3641;
+    color: white;
+    font-size: 1.5rem;
+    border: #0A3641;
+    border-radius: 5px;
+    padding: 0px 10px 20px 10px;
+}
+
+
+/* use w3validator to check*/
+
+/* checkpoints module 2*/
+
+.active {
+    text-decoration: underline;
+}
+
+/* about page*/
+
+.info {
+    background-image: url(../images/forest.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 65vh;
+}
+
+.info p {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.info h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px;
+}
+
+/* form/contact page */
+
+
+
+/* product page */
+
+.jackets {
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 20px;
+}
+
+.products--jackets img {
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+.jackets h1 {
+    text-align: center;
+}
+
+/* contact page*/
+
+input,
+select,
+textarea {
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 10px 10px 10px 0px;
+    padding: 10px;
+}
+
+textarea {
+    height: 200px;
+    width: 300px;
+}
+
+input {
+    height: 30px;
+}
+
+.contact {
+    max-width: 1000px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.form-wrapper {
+    display: flex;
+    text-align: left;
+}
+
+.form-wrapper>* {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* product specific */
+
+.product-specific {
+    max-width: 1000px;
+    display: flex;
+    margin: 50px auto;
+}
+
+.product-specific>* {
+    flex: 1;
+}
+
+.product-image {
+    width: 100%;
+}
+
+.product-image_thumbnails {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+/*media query so that when screen size gets smaller a hamburger menu shows*/
+
+@media (max-width: 600px) {
+
+    nav,
+    #menu-checkbox {
+        display: none;
+    }
+
+    nav ul,
+    nav li,
+    nav a {
+        text-decoration: none;
+    }
+
+    nav a {
+        display: block;
+        font-size: 1.5rem;
+        margin: 0px;
+        padding: 0px;
+        background-color: #0A3641;
+        width: 100px;
+        color: white;
+
+    }
+
+    .fa-solid {
+        margin-left: 40px;
+    }
+
+    #menu-checkbox:checked~nav {
+        display: block;
+    }
+
+
+}
+
+@media (min-width: 600px) {
+
+    #menu-checkbox {
+        display: none;
+    }
+
+
+    nav {
+        text-align: center;
+
+    }
+
+    nav li,
+    nav a {
+        text-align: center;
+        text-decoration: none;
+        display: inline;
+        font-size: 1.5rem;
+        padding: 5px;
+        text-transform: uppercase;
+    }
+
+
+}
